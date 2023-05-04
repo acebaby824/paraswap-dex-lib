@@ -178,6 +178,7 @@ export class GenericRFQ extends ParaSwapLimitOrders {
         unit,
         data: {
           orderInfos: null,
+          poolName: this.dexKey,
         },
         poolAddresses: [this.config.maker],
       },
@@ -255,6 +256,7 @@ export class GenericRFQ extends ParaSwapLimitOrders {
         ...optimalSwapExchange,
         data: {
           orderInfos: [order],
+          poolName: this.dexKey,
         },
       },
       {

@@ -51,6 +51,7 @@ export type ParaSwapOrderBook = {
 
 export type ParaSwapLimitOrdersData = {
   orderInfos: OrderInfo[] | null;
+  poolName: string;
   maxOrdersCount?: number;
 };
 

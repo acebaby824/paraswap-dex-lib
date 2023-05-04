@@ -170,6 +170,7 @@ export class ParaSwapLimitOrders
           prices,
           data: {
             orderInfos: null,
+            poolName: this.dexKey,
             maxOrdersCount,
           },
           poolIdentifier: expectedIdentifier,
@@ -285,7 +286,10 @@ export class ParaSwapLimitOrders
     return [
       {
         ...optimalSwapExchange,
-        data: { orderInfos: encodingValues },
+        data: {
+          orderInfos: encodingValues,
+          poolName: this.dexKey,
+        },
       },
       { deadline: minDeadline },
     ];
